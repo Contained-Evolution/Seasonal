@@ -1,0 +1,42 @@
+# Seasonal
+
+Seasonal is Contained Evolution's accountless home for seasonal stencil, craft, lighting, and playful browser experiences. It runs as a static installable web app with no login, backend, analytics, private service connection, or uploaded user data. Halloween remains available year-round as the first content pack; later packs reuse the same viewer, validation, transfer, and print engine.
+
+Code is licensed under Apache-2.0. Original stencil, visual, and printable hardware assets are licensed under Creative Commons Attribution 4.0. Contained Evolution names and marks remain brand identifiers and are not separately licensed for unrelated products.
+
+The Halloween practice build includes one AI-generated medium-difficulty Moonlit Ghost design, a rotatable four-profile pumpkin preview, local-only image tracing and repair, calibrated Letter/A4 transfer PDFs, an installable offline shell, and the timed Pumpkin Glow screen. The rejected 36-design outline pack is no longer offered. User images are processed only in browser memory; the app contains no upload endpoint.
+
+The Moonlit Ghost sheet has black filled cutouts, attached eye and mouth details, two white bridges that retain the ghost face, puncture dots at no more than 2 mm along the cut edges, sparse arrows tangent to the cutting direction, a numbered 5 mm placement grid, and a 100 mm scale check. `public/downloads/ghost-moon-medium-letter.pdf` is the 160 x 160 mm Letter proof; the app exports Letter or A4 at chosen true size. Print at 100% and measure the scale line. The artwork source is in `public/ghost-moon-source.png`; `scripts/build-ghost-mask.py` rebuilds its packed binary mask using Pillow, and the app's Apache-2.0 browser code traces that mask into vector contours for print. A physical printer and pumpkin transfer have not yet been checked.
+
+## Development
+
+Use Node.js 24.18 or newer.
+
+```powershell
+npm install
+npm run dev
+npm run verify
+```
+
+`npm run verify` runs the stencil/PDF unit tests, production build, and desktop/phone Playwright flows. Pushes run tests but never deploy. Cloudflare Pages releases are manual: `npm run deploy:preview` creates an isolated preview, while production additionally requires the exact package version and the `CE_RELEASE_CONFIRM=seasonal-v1.0.0` environment value.
+
+The first hardware files are an unpublished, unsliced fit coupon for local proof printing. They are not app downloads and do not represent an accepted full pumpkin mat.
+
+## To do
+
+- [ ] Print the Moonlit Ghost sheet at 100%, verify its 100 mm scale line with a ruler, tape it to a pumpkin, and check that both ghost bridges and the 2 mm puncture sequence transfer clearly before adding more designs.
+- [ ] Design and prove the optional grid hardware before creating or publishing CAD downloads:
+  - Accepted concept: this V1 is a secondary transfer method alongside ordinary 2D printing, so reliable wrapping and understandable coordinates matter more than closely matching every pumpkin groove. The lattice and pegs use inexpensive ordinary PLA. The basket-like lattice has no built-in shell curvature and can wrap around pumpkins of different sizes; users may let it span wider gaps when that is preferable. Thin rigid octagonal rings are joined in both axes by short captive print-in-place links like an articulated octopus; neighboring rings nearly touch while retaining enough joint clearance to follow compound curves and roll up like a mat. Every puncturing peg is identical: an octagonal keyed section seats in the ring and provides eight orientations, while the entire pumpkin-entering shaft below it has a wide triangular cross-section. Above it, a slender grip ends in a broad flat push top carrying the same triangle orientation as a recessed top mark. The push top remains above the weave so it can be grasped and pressed, while the peg remains in the pumpkin when the lattice is lifted. A barrel eyelet at each of the four corners accepts the same peg so two or all four corners can hold the lattice on the pumpkin. After one section is transferred, the former upper pegs become the next position's lower anchors so the lattice advances by one full mat height like a ladder; the corner eyelets and same pegs also hold the finished lattice closed when rolled. The phone view, paper stencil, and physical lattice use the same lower-left origin and continuous numeric X/Y coordinates, written as `(X,Y)` such as `(1,1)` and `(10,22)`. The reusable lattice has recessed X numbers below the columns and recessed Y numbers beside the rows. The generated paper carries the same coordinate pitch at exact 1:1 scale so it can be taped to the pumpkin and the physical lattice can be laid directly over it with matching intersections. Overall lattice section size, final joint geometry, exact puncture depth, and edge treatment are not yet accepted.
+  - First physical coupon result: its two-axis articulation works and the original 2.5 mm peg fits the printed socket correctly after a second insertion attempt. Preserve that fit. The puncturing feature is too small to read as a triangle, does not project far enough, and the original push face is too small to grasp or press comfortably. The paired hinge arms also need more material without losing articulation. The supplied photos show black PLA, but the exact spool, nozzle, layer, orientation, and support settings are still unknown and must not be inferred.
+  - Accepted next coupon: retain 9 mm rings but close their pitch to 12.5 mm so the moving link barrels stop only 0.25 mm from the neighboring rings. Test 5.4 mm octagonal seating sections in 0.25/0.35/0.45 mm clearance columns, leaving a visibly thinner ring. Below each seat, use a 4.4 x 3.5 mm triangle for the first 4.0 mm of a 5.5 mm-deep tapered puncture; that triangle clears even the smallest octagonal socket. Repeat its orientation with a 5.5 x 4.2 mm recessed triangle on the 8 mm flat push top. Keep the strengthened compact hinges, three identical pegs, and no straight gauge or straight four-position tool.
+  - Prepared next coupon: `hardware/seasonal-grid-v4-coupon.FCStd`, the individual lattice and peg STL exports, the repeatable generator, and `hardware/exports/seasonal-grid-v4-coupon.3mf` contain six thin-ring articulated hubs and three identical wide-triangle pegs. All nine FCStd bodies are valid single solids; every compact joint has a verified 0.25 mm separation; both STL exports are closed solids; the 3MF contains nine separate build objects; and the complete 76.5 x 21.5 x 16.1 mm plate fits the confirmed 220 mm bed. The pegs are arranged broad-push-top-down. No slicer settings were selected.
+  - [ ] Open and visually inspect the unsliced `hardware/exports/seasonal-grid-v4-coupon.3mf` plate in Orca without accepting print settings or starting a print.
+  - [ ] Record the exact PLA spool, orientation, nozzle, layer, support, and clearance settings here and print the proof before designing a full mat. Inventory confirms an ELEGOO Rapid PLA Plus purchase, but its color and remaining amount still require a physical check before this print.
+  - [ ] Test the coupon across real pumpkin ribs and grooves; record conformity, tile lifting, joint freedom, joint separation, scratching, and required geometry changes here, then repeat until the grid is accepted.
+  - [ ] Prove octagonal seat fit, orientation lock, full triangular-shaft readability, puncture depth, peg retention, mat removal, and visible-design transfer on a small section before scaling the accepted grid to its full size.
+  - [ ] Add the accepted continuous numeric coordinate grid to the phone view and generated paper stencils so a coordinate such as `(10,22)` maps to the same lower-left-referenced hub on the physical lattice and the paper aligns beneath it at 1:1 scale.
+  - [ ] Complete three-pumpkin acceptance before publishing the hardware downloads in the app.
+- [ ] Complete the prepared Cloudflare direct upload, attach `seasonal.containedevolution.com`, verify the live desktop, phone, PDF, install, update, and offline experience, then add the truthful live Seasonal doorway to the company Apps page.
+- [ ] Build the Christmas content pack after the Halloween release is stable.
+- [ ] Build the four-scene ghost carnival shooter after the core stencil experience is proven.
+- [ ] Consider an account-backed Gemini bring-your-own-key generator only after the account boundary and key handling have a separately accepted design.
