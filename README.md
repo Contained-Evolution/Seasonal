@@ -1,3 +1,9 @@
+# Seasonal moved
+
+**Archived source.** Seasonal is now maintained in [Contained-Evolution/Projects/Seasonal](https://github.com/Contained-Evolution/Contained-Evolution/tree/main/Projects/Seasonal). This repository is retained for historical reference; make changes in the main repository.
+
+---
+
 # Seasonal
 
 Seasonal is Contained Evolution's accountless home for seasonal stencil, craft, lighting, and playful browser experiences. It runs as a static installable web app with no login, backend, analytics, private service connection, or uploaded user data. Halloween remains available year-round as the first content pack; later packs reuse the same viewer, validation, transfer, and print engine.
