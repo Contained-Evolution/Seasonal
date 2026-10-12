@@ -87,7 +87,7 @@ export default function App() {
     <main id="top">
       <section className="halloween-masthead" aria-label="Happy Halloween">
         <a className="logo-home" href="#top" aria-label="Contained Evolution Seasonal home">
-          <img src="/contained-evolution-logo.png" alt="Contained Evolution" />
+          <img src="/icon.svg" alt="Seasonal: spring, summer, autumn, and winter" />
           <span className="logo-web" aria-hidden="true">🕸️</span>
         </a>
         <div className="halloween-title"><span aria-hidden="true">🦇</span><h2>Happy Halloween</h2><span aria-hidden="true">🦇</span><i aria-hidden="true">🕸️</i></div>

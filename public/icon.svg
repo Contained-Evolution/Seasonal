@@ -1,8 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#100704"/>
-  <path d="M274 98c-8-35 8-63 42-80 9 34-4 66-42 80Z" fill="#6f8b45"/>
-  <path d="M256 92C132 92 58 169 72 304c10 98 73 154 184 154s174-56 184-154C454 169 380 92 256 92Z" fill="#f47b20"/>
-  <path d="M189 130c-33 54-39 225 2 292M323 130c33 54 39 225-2 292M256 112v326" fill="none" stroke="#9d3b0a" stroke-width="18" stroke-linecap="round"/>
-  <path d="m133 242 70-43-8 86Zm246 0-70-43 8 86ZM174 347q82 67 164 0-30 89-82 89t-82-89Z" fill="#100704"/>
-  <circle cx="256" cy="331" r="12" fill="#ffd43b"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Seasonal: spring, summer, autumn, and winter</title>
+  <defs><clipPath id="circle"><circle cx="256" cy="256" r="220"/></clipPath></defs>
+  <circle cx="256" cy="256" r="240" fill="#17272b"/>
+  <g clip-path="url(#circle)">
+    <path d="M256 256H36V36h220Z" fill="#b7d9ad"/>
+    <path d="M256 256V36h220v220Z" fill="#f7d37d"/>
+    <path d="M256 256h220v220H256Z" fill="#c96e4e"/>
+    <path d="M256 256v220H36V256Z" fill="#9ec9dc"/>
+    <path d="M256 36v440M36 256h440" stroke="#fff7e9" stroke-width="8" opacity=".86"/>
+  </g>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#fff7e9" stroke-width="12"/>
+  <g transform="translate(146 146)">
+    <path d="M0 20V-48M-21 21q-29-8-23-34 26-4 44 26M21 21q29-8 23-34-26-4-44 26" fill="none" stroke="#3d7654" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#fff7ef"><ellipse cy="-65" ry="20" rx="12"/><ellipse cy="-65" ry="20" rx="12" transform="rotate(72)"/><ellipse cy="-65" ry="20" rx="12" transform="rotate(144)"/><ellipse cy="-65" ry="20" rx="12" transform="rotate(216)"/><ellipse cy="-65" ry="20" rx="12" transform="rotate(288)"/></g>
+    <circle cy="-47" r="12" fill="#e7ac49"/>
+  </g>
+  <g transform="translate(366 146)" fill="none" stroke="#a65e26" stroke-width="10" stroke-linecap="round">
+    <circle r="35" fill="#fff2b6"/>
+    <path d="M0-69v-13M0 69v13M-69 0h-13M69 0h13M-49-49l-10-10M49 49l10 10M49-49l10-10M-49 49l-10 10"/>
+  </g>
+  <g transform="translate(366 366)">
+    <path d="M0 63V-62" fill="none" stroke="#713f31" stroke-width="9" stroke-linecap="round"/>
+    <path d="M0-52C-24-63-38-38-33-18-66-18-72 13-47 30-42 56-15 61 0 45 15 61 42 56 47 30 72 13 66-18 33-18 38-38 24-63 0-52Z" fill="#e7ab5b" stroke="#713f31" stroke-width="8" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(146 366)" fill="none" stroke="#f7fcff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M0-65V65M-65 0H65M-46-46l92 92M46-46l-92 92"/>
+    <path d="m-17-48 17 17 17-17M-17 48 0 31l17 17M-48-17l17 17-17 17M48-17 31 0l17 17"/>
+  </g>
 </svg>

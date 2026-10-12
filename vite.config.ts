@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import { readFileSync } from 'node:fs';
 
-const publishedAssets = ['icon.svg', 'contained-evolution-logo.png', 'downloads/ghost-moon-medium-letter.pdf', 'downloads/ghost-moon-medium-preview.png'];
+const publishedAssets = ['icon.svg', 'downloads/ghost-moon-medium-letter.pdf', 'downloads/ghost-moon-medium-preview.png'];
 
 export default defineConfig({
   plugins: [

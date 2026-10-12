@@ -2,6 +2,8 @@
 
 Seasonal is Contained Evolution's accountless home for seasonal stencil, craft, lighting, and playful browser experiences. It runs as a static installable web app with no login, backend, analytics, private service connection, or uploaded user data. Halloween remains available year-round as the first content pack; later packs reuse the same viewer, validation, transfer, and print engine.
 
+The current round icon uses spring, summer, autumn, and winter symbols as a placeholder until Seasonal has its own finished logo.
+
 Code is licensed under Apache-2.0. Original stencil and visual assets are licensed under Creative Commons Attribution 4.0. Contained Evolution names and marks remain brand identifiers and are not separately licensed for unrelated products.
 
 The Halloween practice build includes one AI-generated medium-difficulty Moonlit Ghost design, a rotatable four-profile pumpkin preview, local-only image tracing and repair, calibrated Letter/A4 transfer PDFs, an installable offline shell, and the timed Pumpkin Glow screen. The rejected 36-design outline pack is no longer offered. User images are processed only in browser memory; the app contains no upload endpoint.
